@@ -1,0 +1,44 @@
+/*O caminho completo 'localhost:3333/users' é a rota. Já o '/users' é o recurso que está sendo invocado
+
+Verbos HTTP:
+
+GET: Buscar/Listar uma informação (Usado quando se quer obter alguma informação do Back-End)
+POST: Criar uma nova informação no back-end
+PUT: Alterar uma informação no back-end
+DELETE: Deletar uma informação no back-end
+
+Tipos de parametros:
+-Query Pararms: Parâmetros nomeados na rota após o "?" que servem como filtros, paginação
+-Route Pararms: Parâmetros utilizados para identificar/listar recursos ('users/:id')=>localhost:3333/users/1 (por exemplo)
+-Request Body: Corpo da requisição, utilizado para alterar recursos
+
+Banco de Dados:
+-SQL: MySQL, SQLite, PostgreSQL, Oracle, Microsoft SQL Server
+-NoSQL: MongoDB, CouchDB, etc
+
+Como configurar o banco de dados para fazer a comunicação com a aplicação:
+-Instalar o Driver (instalar o pacote oficial de banco de dados para Node): Select * from Users
+-Query Builder (Fazer as consultas utilizando a linguagem JavaScript): table('Users').select('*').where()
+        => Será usado o Query Builder Knex.js
+
+***********************************************************************************************************/
+
+// app.get('/users', (request, response) => {
+//     return response.send('Hello World');
+// });
+
+********************Example*****************************************************
+routes.post('/users', (request, response) => {
+    //app.post('/users/:id', (request, response) => {        (no caso do Request Pararms)
+    //const params = request.query;
+    //const params = request.params;
+
+    const body = request.body;
+
+    console.log(body);
+    
+    return response.json({
+        evento: 'Semana OmniStack 11.0',
+        aluno: 'Raquel da Silva Vitorino Santos'
+    });
+});
