@@ -1,0 +1,24 @@
+//o App é um componente. Um componente no React nada mais é do que uma função Javascript que retorna um código HTML
+//Quando o código HTML é escrito dentro de um arquivo JavaScript, então chamamos de JSX (JavaScript XML - sendo que XML é a sintaxe do HTML)
+//JSX: Quando o HTML é integrado dentro do JavaScript
+//LiveReload: A atualização automática do servidor após uma alteração ser salva
+
+//Para armazenar informaçãoes em variáveis é preciso utilizar Estados, porque somente eles de fato reflitirão as alterações das variáveis na interface
+
+//Imutabilidade: O valor das variáveis são sobrespotos através de funções especifícas
+
+***************************************************************
+//É essencial importar o react pois, mesmo não usando a variável React, ele é necessário para a interpretação do JSX
+/Atributos HTML no JavaScript são passadas como parâmetros de função nos Componentes
+
+Pacotes de ícones:
+-material Icons
+-font Awesome
+-feather Icons
+
+
+  const [counter,setCounter] = useState(0);
+
+  function increment() {
+    setCounter(counter + 1);
+  };  
